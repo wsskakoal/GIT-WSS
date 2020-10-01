@@ -1,0 +1,19 @@
+html,body {
+  font-family: 'Open Sans', serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+.hero.is-success {
+  background: url("https://st2.depositphotos.com/3259223/11601/v/950/depositphotos_116015408-stock-illustration-blank-wooden-sign-board-template.jpg");
+  background-size: 100%;
+}
+.hero .nav, .hero.is-success .nav {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+input {
+  font-weight: 300;
+}
+p {
+  font-weight: 700;
+}

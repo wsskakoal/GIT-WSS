@@ -1,0 +1,110 @@
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\bin\Debug\Sistemaorcamento.exe.config
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\bin\Debug\Sistemaorcamento.exe
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\bin\Debug\Sistemaorcamento.pdb
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\bin\Debug\BouncyCastle.Crypto.dll
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\bin\Debug\Google.Protobuf.dll
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\bin\Debug\MySql.Data.dll
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\bin\Debug\Renci.SshNet.dll
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\bin\Debug\Google.Protobuf.xml
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\bin\Debug\MySql.Data.xml
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\bin\Debug\Renci.SshNet.xml
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.csprojAssemblyReference.cache
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.frmPrincipal.resources
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.Properties.Resources.resources
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.csproj.GenerateResource.cache
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.csproj.CoreCompileInputs.cache
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.csproj.CopyComplete
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.exe
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.pdb
+D:\Documentos\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.csprojAssemblyReference.cache
+D:\Documentos\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.exe
+D:\Documentos\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.pdb
+D:\Documentos\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.Principal.resources
+D:\Documentos\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.Properties.Resources.resources
+D:\Documentos\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.View.frmClientes.resources
+D:\Documentos\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.View.frmFornecedores.resources
+D:\Documentos\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.View.frmOrcamento.resources
+D:\Documentos\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.View.frmProdutos.resources
+D:\Documentos\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.View.frmUnidades.resources
+D:\Documentos\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.csproj.GenerateResource.cache
+D:\Documentos\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.csproj.CoreCompileInputs.cache
+D:\Documentos\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\bin\Debug\Sistemaorcamento.exe.config
+D:\Documentos\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\bin\Debug\Sistemaorcamento.exe
+D:\Documentos\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\bin\Debug\Sistemaorcamento.pdb
+D:\Documentos\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\bin\Debug\BouncyCastle.Crypto.dll
+D:\Documentos\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\bin\Debug\Google.Protobuf.dll
+D:\Documentos\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\bin\Debug\MySql.Data.dll
+D:\Documentos\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\bin\Debug\Renci.SshNet.dll
+D:\Documentos\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\bin\Debug\Google.Protobuf.xml
+D:\Documentos\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\bin\Debug\MySql.Data.xml
+D:\Documentos\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\bin\Debug\Renci.SshNet.xml
+D:\Documentos\SistemaFinanceiro\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.csproj.CopyComplete
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 09-08 2\Sistemaorcamento\Sistemaorcamento\bin\Debug\Sistemaorcamento.exe.config
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 09-08 2\Sistemaorcamento\Sistemaorcamento\bin\Debug\Sistemaorcamento.exe
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 09-08 2\Sistemaorcamento\Sistemaorcamento\bin\Debug\Sistemaorcamento.pdb
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 09-08 2\Sistemaorcamento\Sistemaorcamento\bin\Debug\BouncyCastle.Crypto.dll
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 09-08 2\Sistemaorcamento\Sistemaorcamento\bin\Debug\Google.Protobuf.dll
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 09-08 2\Sistemaorcamento\Sistemaorcamento\bin\Debug\MySql.Data.dll
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 09-08 2\Sistemaorcamento\Sistemaorcamento\bin\Debug\Renci.SshNet.dll
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 09-08 2\Sistemaorcamento\Sistemaorcamento\bin\Debug\Google.Protobuf.xml
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 09-08 2\Sistemaorcamento\Sistemaorcamento\bin\Debug\MySql.Data.xml
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 09-08 2\Sistemaorcamento\Sistemaorcamento\bin\Debug\Renci.SshNet.xml
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 09-08 2\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.csprojAssemblyReference.cache
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 09-08 2\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.Principal.resources
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 09-08 2\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.Properties.Resources.resources
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 09-08 2\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.View.frmClientes.resources
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 09-08 2\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.View.frmFornecedores.resources
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 09-08 2\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.View.frmOrcamento.resources
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 09-08 2\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.View.frmProdutos.resources
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 09-08 2\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.View.frmUnidades.resources
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 09-08 2\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.csproj.GenerateResource.cache
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 09-08 2\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.csproj.CoreCompileInputs.cache
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 09-08 2\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.csproj.CopyComplete
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 09-08 2\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.exe
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 09-08 2\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.pdb
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 12-08 - Cópia\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.csprojAssemblyReference.cache
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 12-08 - Cópia\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.exe
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 12-08 - Cópia\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.pdb
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 12-08 - Cópia\Sistemaorcamento\Sistemaorcamento\bin\Debug\Sistemaorcamento.exe.config
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 12-08 - Cópia\Sistemaorcamento\Sistemaorcamento\bin\Debug\Sistemaorcamento.exe
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 12-08 - Cópia\Sistemaorcamento\Sistemaorcamento\bin\Debug\Sistemaorcamento.pdb
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 12-08 - Cópia\Sistemaorcamento\Sistemaorcamento\bin\Debug\BouncyCastle.Crypto.dll
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 12-08 - Cópia\Sistemaorcamento\Sistemaorcamento\bin\Debug\Google.Protobuf.dll
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 12-08 - Cópia\Sistemaorcamento\Sistemaorcamento\bin\Debug\MySql.Data.dll
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 12-08 - Cópia\Sistemaorcamento\Sistemaorcamento\bin\Debug\Renci.SshNet.dll
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 12-08 - Cópia\Sistemaorcamento\Sistemaorcamento\bin\Debug\Google.Protobuf.xml
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 12-08 - Cópia\Sistemaorcamento\Sistemaorcamento\bin\Debug\MySql.Data.xml
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 12-08 - Cópia\Sistemaorcamento\Sistemaorcamento\bin\Debug\Renci.SshNet.xml
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 12-08 - Cópia\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.Principal.resources
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 12-08 - Cópia\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.Properties.Resources.resources
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 12-08 - Cópia\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.View.frmClientes.resources
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 12-08 - Cópia\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.View.frmFornecedores.resources
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 12-08 - Cópia\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.View.frmOrcamento.resources
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 12-08 - Cópia\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.View.frmProdutos.resources
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 12-08 - Cópia\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.View.frmUnidades.resources
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 12-08 - Cópia\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.csproj.GenerateResource.cache
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 12-08 - Cópia\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.csproj.CoreCompileInputs.cache
+D:\Arquivos de Usuario\Desktop\SistemaFinanceiro 12-08 - Cópia\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.csproj.CopyComplete
+E:\Projetos\Sistema De Orçamento\Sistema de ORÇAMENTO COMPLETO\Sistemaorcamento\Sistemaorcamento\bin\Debug\Sistemaorcamento.exe.config
+E:\Projetos\Sistema De Orçamento\Sistema de ORÇAMENTO COMPLETO\Sistemaorcamento\Sistemaorcamento\bin\Debug\Sistemaorcamento.exe
+E:\Projetos\Sistema De Orçamento\Sistema de ORÇAMENTO COMPLETO\Sistemaorcamento\Sistemaorcamento\bin\Debug\Sistemaorcamento.pdb
+E:\Projetos\Sistema De Orçamento\Sistema de ORÇAMENTO COMPLETO\Sistemaorcamento\Sistemaorcamento\bin\Debug\BouncyCastle.Crypto.dll
+E:\Projetos\Sistema De Orçamento\Sistema de ORÇAMENTO COMPLETO\Sistemaorcamento\Sistemaorcamento\bin\Debug\Google.Protobuf.dll
+E:\Projetos\Sistema De Orçamento\Sistema de ORÇAMENTO COMPLETO\Sistemaorcamento\Sistemaorcamento\bin\Debug\MySql.Data.dll
+E:\Projetos\Sistema De Orçamento\Sistema de ORÇAMENTO COMPLETO\Sistemaorcamento\Sistemaorcamento\bin\Debug\Renci.SshNet.dll
+E:\Projetos\Sistema De Orçamento\Sistema de ORÇAMENTO COMPLETO\Sistemaorcamento\Sistemaorcamento\bin\Debug\Google.Protobuf.xml
+E:\Projetos\Sistema De Orçamento\Sistema de ORÇAMENTO COMPLETO\Sistemaorcamento\Sistemaorcamento\bin\Debug\MySql.Data.xml
+E:\Projetos\Sistema De Orçamento\Sistema de ORÇAMENTO COMPLETO\Sistemaorcamento\Sistemaorcamento\bin\Debug\Renci.SshNet.xml
+E:\Projetos\Sistema De Orçamento\Sistema de ORÇAMENTO COMPLETO\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.csprojAssemblyReference.cache
+E:\Projetos\Sistema De Orçamento\Sistema de ORÇAMENTO COMPLETO\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.Principal.resources
+E:\Projetos\Sistema De Orçamento\Sistema de ORÇAMENTO COMPLETO\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.Properties.Resources.resources
+E:\Projetos\Sistema De Orçamento\Sistema de ORÇAMENTO COMPLETO\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.View.frmClientes.resources
+E:\Projetos\Sistema De Orçamento\Sistema de ORÇAMENTO COMPLETO\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.View.frmFornecedores.resources
+E:\Projetos\Sistema De Orçamento\Sistema de ORÇAMENTO COMPLETO\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.View.frmOrcamento.resources
+E:\Projetos\Sistema De Orçamento\Sistema de ORÇAMENTO COMPLETO\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.View.frmProdutos.resources
+E:\Projetos\Sistema De Orçamento\Sistema de ORÇAMENTO COMPLETO\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.View.frmUnidades.resources
+E:\Projetos\Sistema De Orçamento\Sistema de ORÇAMENTO COMPLETO\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.csproj.GenerateResource.cache
+E:\Projetos\Sistema De Orçamento\Sistema de ORÇAMENTO COMPLETO\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.csproj.CoreCompileInputs.cache
+E:\Projetos\Sistema De Orçamento\Sistema de ORÇAMENTO COMPLETO\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.csproj.CopyComplete
+E:\Projetos\Sistema De Orçamento\Sistema de ORÇAMENTO COMPLETO\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.exe
+E:\Projetos\Sistema De Orçamento\Sistema de ORÇAMENTO COMPLETO\Sistemaorcamento\Sistemaorcamento\obj\Debug\Sistemaorcamento.pdb

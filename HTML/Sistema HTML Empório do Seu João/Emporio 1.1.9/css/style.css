@@ -1,0 +1,24 @@
+html,body {
+  font-family: 'Open Sans', serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+.hero.is-success {
+  background: url("https://images4.alphacoders.com/600/thumb-1920-600528.png");
+  background-size: 100%;
+}
+.hero .nav, .hero.is-success .nav {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+input {
+  font-weight: 300;
+}
+p {
+  font-weight: 700;
+}
+
+.box {
+  color: black;
+ 
+}

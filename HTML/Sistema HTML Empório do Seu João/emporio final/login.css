@@ -1,0 +1,125 @@
+body{
+    background-color: rgba(0, 2, 7, 0.705);
+}
+
+.principal {
+    padding-top: 10%;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    justify-content: center;
+    justify-self: center;
+    font-family:Helvetica, sans-serif;
+}
+
+.cadastro {
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    justify-content: center;
+    justify-self: center;
+}
+
+.login {
+    
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    justify-content: center;
+    justify-self: center;
+   
+}
+.center {
+    
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  justify-content: center;
+  justify-self: center;
+ 
+ 
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+}
+
+.emporioimg {
+    
+    width: 100%;
+    height: 100%;
+}
+
+div.container {
+  width: 80%;
+}
+
+.left{
+    align-items: left;
+    align-content: left;
+    
+}
+
+ /* The side navigation menu */
+ .sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.76); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.9s; /* 0.5 second transition effect to slide in the sidenav */
+    text-align: center;
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #8b8b8b;
+    display: block;
+    transition: 0.3s;
+    right: 0;
+    text-align: center;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #000000;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 50px;
+    margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  } 

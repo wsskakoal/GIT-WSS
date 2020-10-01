@@ -1,0 +1,35 @@
+C:\Users\hugov\source\repos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.csprojAssemblyReference.cache
+C:\Users\hugov\source\repos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.frmPrincipal.resources
+C:\Users\hugov\source\repos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.Properties.Resources.resources
+C:\Users\hugov\source\repos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.View.frmClientes.resources
+C:\Users\hugov\source\repos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.View.frmFornecedores.resources
+C:\Users\hugov\source\repos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.View.frmOrcamentos.resources
+C:\Users\hugov\source\repos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.View.frmProdutos.resources
+C:\Users\hugov\source\repos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.View.frmUnidades.resources
+C:\Users\hugov\source\repos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.csproj.GenerateResource.cache
+C:\Users\hugov\source\repos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.csproj.CoreCompileInputs.cache
+C:\Users\hugov\source\repos\SistemaOrcamento\SistemaOrcamento\bin\Debug\SistemaOrcamento.exe.config
+C:\Users\hugov\source\repos\SistemaOrcamento\SistemaOrcamento\bin\Debug\SistemaOrcamento.exe
+C:\Users\hugov\source\repos\SistemaOrcamento\SistemaOrcamento\bin\Debug\SistemaOrcamento.pdb
+C:\Users\hugov\source\repos\SistemaOrcamento\SistemaOrcamento\bin\Debug\MySql.Data.dll
+C:\Users\hugov\source\repos\SistemaOrcamento\SistemaOrcamento\bin\Debug\MySql.Data.xml
+C:\Users\hugov\source\repos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.csproj.CopyComplete
+C:\Users\hugov\source\repos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.exe
+C:\Users\hugov\source\repos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.pdb
+D:\Arquivos de Usuario\Desktop\Arquivos\SistemaOrcamento\SistemaOrcamento\bin\Debug\SistemaOrcamento.exe.config
+D:\Arquivos de Usuario\Desktop\Arquivos\SistemaOrcamento\SistemaOrcamento\bin\Debug\SistemaOrcamento.exe
+D:\Arquivos de Usuario\Desktop\Arquivos\SistemaOrcamento\SistemaOrcamento\bin\Debug\SistemaOrcamento.pdb
+D:\Arquivos de Usuario\Desktop\Arquivos\SistemaOrcamento\SistemaOrcamento\bin\Debug\MySql.Data.xml
+D:\Arquivos de Usuario\Desktop\Arquivos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.csprojAssemblyReference.cache
+D:\Arquivos de Usuario\Desktop\Arquivos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.frmPrincipal.resources
+D:\Arquivos de Usuario\Desktop\Arquivos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.Properties.Resources.resources
+D:\Arquivos de Usuario\Desktop\Arquivos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.View.frmClientes.resources
+D:\Arquivos de Usuario\Desktop\Arquivos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.View.frmFornecedores.resources
+D:\Arquivos de Usuario\Desktop\Arquivos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.View.frmOrcamentos.resources
+D:\Arquivos de Usuario\Desktop\Arquivos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.View.frmProdutos.resources
+D:\Arquivos de Usuario\Desktop\Arquivos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.View.frmUnidades.resources
+D:\Arquivos de Usuario\Desktop\Arquivos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.csproj.GenerateResource.cache
+D:\Arquivos de Usuario\Desktop\Arquivos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.csproj.CoreCompileInputs.cache
+D:\Arquivos de Usuario\Desktop\Arquivos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.csproj.CopyComplete
+D:\Arquivos de Usuario\Desktop\Arquivos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.exe
+D:\Arquivos de Usuario\Desktop\Arquivos\SistemaOrcamento\SistemaOrcamento\obj\Debug\SistemaOrcamento.pdb

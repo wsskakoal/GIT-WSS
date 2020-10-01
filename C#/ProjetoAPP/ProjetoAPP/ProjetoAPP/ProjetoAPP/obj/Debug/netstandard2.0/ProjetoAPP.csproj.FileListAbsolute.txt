@@ -1,0 +1,12 @@
+E:\Projetos\ProjetoAPP\ProjetoAPP\ProjetoAPP\ProjetoAPP\bin\Debug\netstandard2.0\ProjetoAPP.deps.json
+E:\Projetos\ProjetoAPP\ProjetoAPP\ProjetoAPP\ProjetoAPP\bin\Debug\netstandard2.0\ProjetoAPP.dll
+E:\Projetos\ProjetoAPP\ProjetoAPP\ProjetoAPP\ProjetoAPP\bin\Debug\netstandard2.0\ProjetoAPP.pdb
+E:\Projetos\ProjetoAPP\ProjetoAPP\ProjetoAPP\ProjetoAPP\obj\Debug\netstandard2.0\ProjetoAPP.csprojAssemblyReference.cache
+E:\Projetos\ProjetoAPP\ProjetoAPP\ProjetoAPP\ProjetoAPP\obj\Debug\netstandard2.0\App.xaml.g.cs
+E:\Projetos\ProjetoAPP\ProjetoAPP\ProjetoAPP\ProjetoAPP\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+E:\Projetos\ProjetoAPP\ProjetoAPP\ProjetoAPP\ProjetoAPP\obj\Debug\netstandard2.0\ProjetoAPP.csproj.CoreCompileInputs.cache
+E:\Projetos\ProjetoAPP\ProjetoAPP\ProjetoAPP\ProjetoAPP\obj\Debug\netstandard2.0\ProjetoAPP.AssemblyInfoInputs.cache
+E:\Projetos\ProjetoAPP\ProjetoAPP\ProjetoAPP\ProjetoAPP\obj\Debug\netstandard2.0\ProjetoAPP.AssemblyInfo.cs
+E:\Projetos\ProjetoAPP\ProjetoAPP\ProjetoAPP\ProjetoAPP\obj\Debug\netstandard2.0\XamlC.stamp
+E:\Projetos\ProjetoAPP\ProjetoAPP\ProjetoAPP\ProjetoAPP\obj\Debug\netstandard2.0\ProjetoAPP.dll
+E:\Projetos\ProjetoAPP\ProjetoAPP\ProjetoAPP\ProjetoAPP\obj\Debug\netstandard2.0\ProjetoAPP.pdb
