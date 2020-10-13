@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "879715776386",
+    "firebase_url": "https://wsskakao.firebaseio.com",
+    "project_id": "wsskakao",
+    "storage_bucket": "wsskakao.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:879715776386:android:0aba7cdc7510a43344c19b",
+        "android_client_info": {
+          "package_name": "com.example.firebaselogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "879715776386-11k3q5bf7eok93p3rlh7kjchoo0rjh97.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdr8a1zo9sJkigIunrE4Z9iIqQlr1j3lg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "879715776386-11k3q5bf7eok93p3rlh7kjchoo0rjh97.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
