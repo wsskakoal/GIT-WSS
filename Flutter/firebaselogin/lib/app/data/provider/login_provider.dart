@@ -4,6 +4,8 @@ import 'package:firebaselogin/app/data/model/user_model.dart';
 import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
 
+import '../model/user_model.dart';
+
 const baseUrl = 'http://gerador-nomes.herokuapp.com/nomes/10';
 
 class LoginApiClient {
@@ -36,7 +38,12 @@ class LoginApiClient {
               email: email, password: senha))
           .user;
 
-      return UserModel.fromSnapshot(currentUser);
+      var userModel = new UserModel();
+      userModel.name = name;
+      userModel.email = currentUser.email;
+      userModel.urlimage = currentUser.photoURL;
+
+      return userModel;
       // Atualizando nome do usuario
 
     } catch (e) {
