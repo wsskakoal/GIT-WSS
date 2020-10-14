@@ -1,5 +1,7 @@
+import 'package:firebaselogin/app/data/controller/login_controller.dart';
+import 'package:firebaselogin/app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -7,22 +9,20 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  @override
-  void initState() {
-    SystemChrome.setEnabledSystemUIOverlays([]);
-    super.initState();
-  }
-
+  final LoginController _loginController = Get.find<LoginController>();
+  final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        key: _formKey,
         width: double.maxFinite,
         height: double.maxFinite,
         color: Colors.grey[900],
         child: Stack(
           children: <Widget>[
             Container(
+              
               width: double.maxFinite,
               child: Image.asset(
                 "assets/splash.jpg",
@@ -58,16 +58,26 @@ class _LoginPageState extends State<LoginPage> {
                   children: <Widget>[
                     // PARTE DE FORMULARIO
                     TextField(
+                      controller: _loginController.emailTextController,
                       textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 20),
                       autofocus: true,
                       decoration: InputDecoration(
-                        hintText: "Usuário",
+                        hintText: "E-mail",
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.only(top: 20, bottom: 50),
-                      child: TextField(
+                      child: TextFormField(
+                        controller: _loginController.passwordTextController,
+                        // ignore: missing_return
+                        validator: (value) {
+                            if (value.isEmpty) {
+                              return "Campo obrigatório";
+                            } else if (value.length < 6) {
+                              return "Senha deve conter no mínimo 6 caracteres.";
+                            }
+                          },
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 20),
                         obscureText: true,
@@ -111,7 +121,9 @@ class _LoginPageState extends State<LoginPage> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20),
                             side: BorderSide(color: Colors.deepPurple)),
-                        onPressed: () {},
+                        onPressed: () {
+                          _loginController.login();
+                        },
                         child: Text("LOGIN"),
                         textColor: Colors.white,
                         splashColor: Colors.deepPurple,
@@ -136,6 +148,19 @@ class _LoginPageState extends State<LoginPage> {
                         onPressed: null,
                         child: Text(
                           "Esqueceu sua senha?",
+                          style: TextStyle(color: Colors.grey, fontSize: 19.0),
+                        ),
+                      ),
+                    ),
+
+                    Padding(
+                      padding: EdgeInsets.only(top: 13),
+                      child: FlatButton(
+                        onPressed: () {
+                          Get.toNamed(Routes.REGISTER);
+                        },
+                        child: Text(
+                          "Cadastrar",
                           style: TextStyle(color: Colors.grey, fontSize: 19.0),
                         ),
                       ),

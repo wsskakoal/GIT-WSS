@@ -1,6 +1,8 @@
-import 'dart:convert';
-import 'package:firebase_auth/firebase_auth.dart' as auth;
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebaselogin/app/data/model/user_model.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
 
@@ -9,11 +11,16 @@ import '../model/user_model.dart';
 const baseUrl = 'http://gerador-nomes.herokuapp.com/nomes/10';
 
 class LoginApiClient {
-  auth.FirebaseAuth _firebaseAuth = auth.FirebaseAuth.instance;
 
+  
+  FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
+  GetStorage box = GetStorage('login_firebase');
+
+  // ignore: deprecated_member_use
   Stream<UserModel> get onAuthStateChanged => _firebaseAuth.onAuthStateChanged
-      .map((auth.User currentUser) => UserModel.fromSnapshot(currentUser));
+      .map((FirebaseUser currentUser) => UserModel.fromSnapshot(currentUser));
 
+// LOGIN INICIAL.
   // ignore: missing_return
   Future<UserModel> signInWithEmailAndPassword(
       String email, String senha, String name) async {
@@ -23,14 +30,52 @@ class LoginApiClient {
           .user;
 
       return UserModel.fromSnapshot(currentUser);
-      // Atualizando nome do usuario
-
     } catch (e) {
       print(e);
+      Get.back();
+      switch (e.code) {
+        case "invalid-email":
+          Get.defaultDialog(
+              title: "Ocorreu um erro", content: Text("Email inválido."));
+          break;
+        case "wrong-password":
+          Get.defaultDialog(
+              title: "Ocorreu um erro",
+              content: Text("Your password is wrong."));
+          break;
+        case "user-not-found":
+          Get.defaultDialog(
+              title: "Ocorreu um erro",
+              content: Text("User with this email doesn't exist."));
+          break;
+        case "user-disabled":
+          Get.defaultDialog(
+              title: "Ocorreu um erro",
+              content: Text("User with this email has been disabled."));
+          break;
+        case "too-many-requests":
+          Get.defaultDialog(
+              title: "Ocorreu um erro",
+              content: Text(
+                  "Muitas tentativas. Tente novamente em alguns segundos."));
+          break;
+        case "operation-not-allowed":
+          Get.defaultDialog(
+              title: "Ocorreu um erro",
+              content:
+                  Text("Signing in with Email and Password is not enabled."));
+          break;
+        default:
+          Get.defaultDialog(
+              title: "Ocorreu um erro",
+              content:
+                  Text("Ocorreu um erro inesperado ao fazer login. Erro:  $e"));
+      }
       return null;
     }
   }
 
+// CRIAR USUARIO
   Future<UserModel> createUserWithEmailAndPassword(
       String email, String senha, String name) async {
     try {
@@ -38,83 +83,65 @@ class LoginApiClient {
               email: email, password: senha))
           .user;
 
-      var userModel = new UserModel();
-      userModel.name = name;
-      userModel.email = currentUser.email;
-      userModel.urlimage = currentUser.photoURL;
+      var userUpdate = UserUpdateInfo();
+      userUpdate.displayName = name;
 
-      return userModel;
+      await currentUser.updateProfile(userUpdate);
+      await currentUser.reload();
+      return UserModel.fromSnapshot(currentUser);
       // Atualizando nome do usuario
 
     } catch (e) {
       print(e);
+      Get.back();
+      switch (e.code) {
+        case "invalid-email":
+          Get.defaultDialog(
+              title: "Ocorreu um erro", content: Text("Email inválido."));
+          break;
+        case "wrong-password":
+          Get.defaultDialog(
+              title: "Ocorreu um erro",
+              content: Text("Your password is wrong."));
+          break;
+        case "email-already-in-use":
+          Get.defaultDialog(
+              title: "Ocorreu um erro",
+              content: Text("E-mail já esta em uso."));
+          break;
+        case "weak-password":
+          Get.defaultDialog(
+              title: "Ocorreu um erro", content: Text("Senha muito fraca."));
+          break;
+        case "operation-not-allowed":
+          Get.defaultDialog(
+              title: "Ocorreu um erro",
+              content: Text("Operação nao realizada."));
+          break;
+        case "invalid-credential":
+          Get.defaultDialog(
+              title: "Ocorreu um erro",
+              content: Text("Credenciais inválidas."));
+          break;
+
+        default:
+          Get.defaultDialog(
+              title: "Ocorreu um erro",
+              content:
+                  Text("Ocorreu um erro inesperado ao fazer login. Erro:  $e"));
+      }
       return null;
     }
   }
 
   ///Future<UserModel> ,
-
+// DESLOGAR
   signOut() {
+    box.write("auth", null);
+    //box.erase();
     return _firebaseAuth.signOut();
   }
 
   final http.Client httpClient;
   LoginApiClient({@required this.httpClient});
-
-/*   getAll() async {
-    try {
-      var response = await httpClient.get(baseUrl);
-      if (response.statusCode == 200) {
-        Map<String, dynamic> jsonResponse = json.decode(response.body);
-        List<UserModel> listMyModel = jsonResponse['data'].map<UserModel>((map) {
-          return UserModel.fromJson(map);
-        }).toList();
-        return listMyModel;
-      } else
-        print('erro -get');
-    } catch (_) {}
-  } */
-
-  /*  getId(id) async {
-    try {
-      var response = await httpClient.get(baseUrl);
-      if (response.statusCode == 200) {
-        Map<String, dynamic> jsonResponse = json.decode(response.body);
-        // TODO: implement methods!
-      } else
-        print('erro -get');
-    } catch (_) {}
-  }
-
-  add(obj) async {
-    try {
-      var response = await httpClient.post(baseUrl,
-          headers: {'Content-Type': 'application/json'}, body: jsonEncode(obj));
-      if (response.statusCode == 200) {
-        // TODO: implement methods!
-      } else
-        print('erro -post');
-    } catch (_) {}
-  }
-
-  edit(obj) async {
-    try {
-      var response = await httpClient.put(baseUrl,
-          headers: {'Content-Type': 'application/json'}, body: jsonEncode(obj));
-      if (response.statusCode == 200) {
-        // TODO: implement methods!
-      } else
-        print('erro -post');
-    } catch (_) {}
-  }
-
-  delete(obj) async {
-    try {
-      var response = await httpClient.delete(baseUrl);
-      if (response.statusCode == 200) {
-        // TODO: implement methods!
-      } else
-        print('erro -post');
-    } catch (_) {}
-  } */
 }
