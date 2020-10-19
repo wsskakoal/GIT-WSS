@@ -1,2 +1,3 @@
 # GIT-WSS
-Todos os meus projetos
+BEM VINDO AO MEU GIT HUB :D 
+Delicie-se com todos os meus projetos
