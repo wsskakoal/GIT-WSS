@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-//import 'package:http/http.dart' as http;
 import 'package:lojawss/app/telas/abas/tablojas.dart';
-import 'package:lojawss/app/telas/widgets/custom_drawer.dart';
+import 'package:lojawss/app/telas/widgets/menu_lateral.dart';
 
 import 'abas/hometab.dart';
 import 'abas/tabpromocoes.dart';
@@ -18,14 +16,14 @@ class HomePage extends StatelessWidget {
       children: <Widget>[
         Scaffold(
           body: HomeTab(_pageController),
-          drawer: CustomDrawer(_pageController),
+          drawer: MenuLateral(_pageController),
         ),
         Scaffold(
           body: TabPromocoes(_pageController),
         ),
         Scaffold(
           body: TabLojas(),
-          drawer: CustomDrawer(_pageController),
+          drawer: MenuLateral(_pageController),
         ),
       ],
     );

@@ -1,12 +1,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:lojawss/app/telas/widgets/category_screen.dart';
+import 'package:lojawss/app/dados/dados_produtos.dart';
+import 'package:lojawss/app/telas/tela_categoria.dart';
 
-class CategoryTile extends StatelessWidget {
+class JanelaProdutosLista extends StatelessWidget {
   // RECEBE UM DOCUMENTO
-  final DocumentSnapshot snapshot;
+  final DadosProduto produto;
   // CRIA O CONSTRUTOR PADRAO COM O DOCUMENTO
-  CategoryTile(this.snapshot);
+  JanelaProdutosLista(this.produto);
 
   @override
   Widget build(BuildContext context) {
@@ -16,15 +17,16 @@ class CategoryTile extends StatelessWidget {
       leading: CircleAvatar(
         radius: 25.0,
         backgroundColor: Colors.transparent,
-        backgroundImage: NetworkImage(snapshot.data["icon"]),
+        backgroundImage: NetworkImage(produto.images[0]),
       ),
       // TITULO
-      title: Text(snapshot.data["titulo"]),
+      title: Text(produto.titulo),
       // ICONE QUE FICA NO FINAL DO TITULO.
       trailing: Icon(Icons.keyboard_arrow_right),
       onTap: () {
-        Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => CategoryScreen(snapshot)));
+        /* Navigator.of(context).push(
+            // IR PARA A TELA DE CATEGORIA
+            MaterialPageRoute(builder: (context) => TelaCategoria(snapshot))); */
       },
     );
   }

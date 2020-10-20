@@ -1,16 +1,19 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:lojawss/app/dados/dados_produtos.dart';
+import 'package:lojawss/app/telas/widgets/janela_produtos_grade.dart';
 
-class CategoryScreen extends StatelessWidget {
-  final DocumentSnapshot snapshot;
-  CategoryScreen(this.snapshot);
+class TelaCategoria extends StatelessWidget {
+  final String categoria;
+
+  TelaCategoria(this.categoria);
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(snapshot.data["titulo"]),
+          title: Text(this.categoria),
           centerTitle: true,
           bottom: TabBar(
             indicatorColor: Colors.white,
@@ -21,10 +24,10 @@ class CategoryScreen extends StatelessWidget {
           ),
         ),
         body: FutureBuilder<QuerySnapshot>(
+          // CARREGAR APENAS OS ITENS DA CATEGORIA SELECIONADA
           future: Firestore.instance
               .collection("produtos")
-              .document(snapshot.documentID)
-              .collection("itens")
+              .where("categoria", isEqualTo: this.categoria)
               .getDocuments(),
           builder: (context, snapshot) {
             if (!snapshot.hasData) {
@@ -38,10 +41,22 @@ class CategoryScreen extends StatelessWidget {
                   GridView.builder(
                       padding: EdgeInsets.all(4.0),
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2),
-                      itemBuilder: null),
-                  Container(
-                    color: Colors.green,
+                          crossAxisCount: 2,
+                          mainAxisSpacing: 4.0,
+                          crossAxisSpacing: 4.0,
+                          childAspectRatio: 0.65),
+                      itemCount: snapshot.data.documents.length,
+                      itemBuilder: (context, index) {
+                        return JanelaProdutosGrade(DadosProduto.fromDocument(
+                            snapshot.data.documents[index]));
+                      }),
+                  ListView.builder(
+                    padding: EdgeInsets.all(4.0),
+                    itemCount: snapshot.data.documents.length,
+                    itemBuilder: (context, index) {
+                      return JanelaProdutosGrade(DadosProduto.fromDocument(
+                          snapshot.data.documents[index]));
+                    },
                   ),
                 ],
               );

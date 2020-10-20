@@ -1,12 +1,10 @@
-import 'dart:html';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class DadosProduto {
   String id;
   String titulo;
   String descricao;
-  //double preco;
+  double preco;
   List images;
   String categoria;
 
@@ -15,6 +13,7 @@ class DadosProduto {
     titulo = snapshot.data["titulo"];
     descricao = snapshot.data["descricao"];
     images = snapshot.data["imgs"];
-    //preco = snapshot.data["price"] + 0.0;
+    categoria = snapshot.data["categoria"];
+    preco = snapshot.data["preco"] + 0.0;
   }
 }

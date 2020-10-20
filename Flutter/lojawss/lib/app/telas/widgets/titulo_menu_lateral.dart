@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class DrawerTile extends StatelessWidget {
+class TituloMenuLateral extends StatelessWidget {
   final IconData icon;
   final String text;
   final PageController controller;
   final int page;
 
-  DrawerTile(this.icon, this.controller, this.page, this.text);
+  TituloMenuLateral(this.icon, this.controller, this.page, this.text);
 
   @override
   Widget build(BuildContext context) {

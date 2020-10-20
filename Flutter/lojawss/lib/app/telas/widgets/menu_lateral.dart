@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:lojawss/app/telas/home_page.dart';
-import 'package:scoped_model/scoped_model.dart';
+import 'titulo_menu_lateral.dart';
 
-import 'drawer_tile.dart';
-
-class CustomDrawer extends StatelessWidget {
+class MenuLateral extends StatelessWidget {
   final PageController pageController;
-  CustomDrawer(this.pageController);
+  MenuLateral(this.pageController);
 
   @override
   Widget build(BuildContext context) {
@@ -59,9 +56,9 @@ class CustomDrawer extends StatelessWidget {
                 ),
               ),
               Divider(),
-              DrawerTile(Icons.home, pageController, 0, "Início"),
-              DrawerTile(Icons.local_offer, pageController, 1, "Promoções"),
-              DrawerTile(Icons.store, pageController, 2, "Lojas"),
+              TituloMenuLateral(Icons.home, pageController, 0, "Início"),
+              TituloMenuLateral(Icons.local_offer, pageController, 1, "Promoções"),
+              TituloMenuLateral(Icons.store, pageController, 2, "Lojas"),
             ],
           )
         ],
