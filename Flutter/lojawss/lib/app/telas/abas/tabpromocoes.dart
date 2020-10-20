@@ -7,6 +7,8 @@ import 'package:lojawss/app/telas/widgets/janela_produtos_grade.dart';
 import 'package:lojawss/app/telas/widgets/menu_lateral.dart';
 
 class TabPromocoes extends StatelessWidget {
+
+
   final PageController controller;
   TabPromocoes(this.controller);
   @override
@@ -22,14 +24,14 @@ class TabPromocoes extends StatelessWidget {
             valueColor: AlwaysStoppedAnimation(Colors.white),
           );
         } else {
-          /*  var dividedCategorias = ListTile.divideTiles(
+          /*          var dividedCategorias = ListTile.divideTiles(
                   tiles: snapshot.data.documents.map((doc) {
                     return JanelaCategorias(doc);
                   }).toList(),
                   color: Colors.grey[500])
               .toList();
 
-               var dividedProdutos = ListTile.divideTiles(
+          var dividedProdutos = ListTile.divideTiles(
                   tiles: snapshot.data.documents.map((doc) {
                     return JanelaCategorias(doc);
                   }).toList(),

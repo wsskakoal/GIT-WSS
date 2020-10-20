@@ -1,7 +1,5 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:lojawss/app/dados/dados_produtos.dart';
-import 'package:lojawss/app/telas/tela_categoria.dart';
 
 class JanelaProdutosLista extends StatelessWidget {
   // RECEBE UM DOCUMENTO

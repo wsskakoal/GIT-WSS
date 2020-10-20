@@ -1,6 +1,6 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:lojawss/app/dados/dados_produtos.dart';
+import 'package:lojawss/app/telas/tela_produto.dart';
 
 class JanelaProdutosGrade extends StatelessWidget {
   final DadosProduto produto;
@@ -9,6 +9,10 @@ class JanelaProdutosGrade extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      onTap: () {
+        Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => TelaProduto(produto)));
+      },
       child: Card(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -27,7 +31,9 @@ class JanelaProdutosGrade extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   Text(produto.titulo),
-                  Text("R\$ ${produto.preco}"),
+                  Text(
+                    "R\$ ${produto.preco.toStringAsFixed(2)}",
+                  ),
                 ],
               ),
             ))
