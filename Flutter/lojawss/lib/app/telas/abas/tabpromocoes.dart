@@ -7,8 +7,6 @@ import 'package:lojawss/app/telas/widgets/janela_produtos_grade.dart';
 import 'package:lojawss/app/telas/widgets/menu_lateral.dart';
 
 class TabPromocoes extends StatelessWidget {
-
-
   final PageController controller;
   TabPromocoes(this.controller);
   @override
@@ -110,7 +108,9 @@ class TabPromocoes extends StatelessWidget {
                                   produto,
                                   qtdItensCategoria,
                                 );
-                              } else {}
+                              } else {
+                                return null;
+                              }
                             }).toList(),
                             color: Colors.grey[500])
                         .toList(),

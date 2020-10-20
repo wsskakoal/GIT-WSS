@@ -2,6 +2,8 @@ import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
 import 'package:lojawss/app/dados/dados_produtos.dart';
 
+import 'janela_imagem.dart';
+
 class TelaProduto extends StatefulWidget {
   final DadosProduto produto;
   TelaProduto(this.produto);
@@ -28,6 +30,12 @@ class _TelaProdutoState extends State<TelaProduto> {
           AspectRatio(
             aspectRatio: 0.9,
             child: Carousel(
+              boxFit: BoxFit.cover,
+              onImageTap: (index) {
+                Navigator.of(context).push(
+                  // IR PARA A TELA DA IMAGEM
+                  MaterialPageRoute(builder: (context) => TelaImagem(produto.images[index])));
+              },
               images: produto.images.map((url) {
                 return NetworkImage(url);
               }).toList(),
@@ -106,7 +114,33 @@ class _TelaProdutoState extends State<TelaProduto> {
                       );
                     }).toList(),
                   ),
-                )
+                ),
+                SizedBox(
+                  height: 16.0,
+                ),
+                SizedBox(
+                  height: 44.0,
+                  child: RaisedButton(
+                    onPressed: size != null ? () {} : null,
+                    child: Text(
+                      "Adicionar ao carrinho",
+                      style: TextStyle(fontSize: 25),
+                    ),
+                    color: corPrimaria,
+                    textColor: Colors.white,
+                  ),
+                ),
+                SizedBox(
+                  height: 16.0,
+                ),
+                Text(
+                  "Descrição",
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  produto.descricao,
+                  style: TextStyle(fontSize: 16.0),
+                ),
               ],
             ),
           ),

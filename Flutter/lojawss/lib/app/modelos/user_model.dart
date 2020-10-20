@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 class UserModel extends Model {
-  FirebaseAuth _auth = FirebaseAuth.instance;
+  //FirebaseAuth _auth = FirebaseAuth.instance;
   FirebaseUser firebaseUser;
   Map<String, dynamic> userData = Map();
 
