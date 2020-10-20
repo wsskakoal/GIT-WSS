@@ -1,0 +1,4 @@
+InkWell - Clicar com animação.
+GestoreDetector - Clicar sem animação.
+
+Expanded() - Pega todo o espaço disponivel
