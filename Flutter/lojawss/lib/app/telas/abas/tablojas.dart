@@ -32,29 +32,18 @@ class TabLojas extends StatelessWidget {
               snap: true,
               // Definir transparencia
               backgroundColor: Colors.transparent,
-
               elevation: 0.0,
               flexibleSpace: FlexibleSpaceBar(
                 title: const Text("Lojas"),
                 centerTitle: true,
               ),
             ),
-            SliverToBoxAdapter(
+            /*    SliverToBoxAdapter(
               child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    FlatButton.icon(
-                      label: Text("Promoções"),
-                      icon: Icon(Icons.local_offer),
-                      onPressed: () {},
-                    ),
-                    FlatButton.icon(
-                      label: Text("Lojas"),
-                      icon: Icon(Icons.store_mall_directory),
-                      onPressed: () {},
-                    ),
-                  ]),
-            ),
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[],
+              ),
+            ), */
             FutureBuilder<QuerySnapshot>(
               builder: (context, snapshot) {
                 if (!snapshot.hasData) {

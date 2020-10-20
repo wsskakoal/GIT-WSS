@@ -6,6 +6,8 @@ import 'package:transparent_image/transparent_image.dart';
 //import 'package:get/get.dart';
 
 class HomeTab extends StatelessWidget {
+  final PageController controller;
+  HomeTab(this.controller);
   @override
   Widget build(BuildContext context) {
     // CRIADO DE DEGRADE
@@ -47,12 +49,16 @@ class HomeTab extends StatelessWidget {
                     FlatButton.icon(
                       label: Text("Promoções"),
                       icon: Icon(Icons.local_offer),
-                      onPressed: () {},
+                      onPressed: () {
+                        controller.jumpToPage(1);
+                      },
                     ),
                     FlatButton.icon(
                       label: Text("Lojas"),
                       icon: Icon(Icons.store_mall_directory),
-                      onPressed: () {},
+                      onPressed: () {
+                        controller.jumpToPage(2);
+                      },
                     ),
                   ]),
             ),

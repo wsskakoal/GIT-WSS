@@ -1,0 +1,11 @@
+GestoreDetector - Criar um campo onde pega uma click no ontap.
+
+- PARA CRIAR UMA BARRA DE NAVEGAÇÃO
+return Scaffold(
+            appBar: AppBar(
+                bottom: TabBar(
+              tabs: [
+                Icon(Icons.ac_unit),
+              ],
+            )),
+
