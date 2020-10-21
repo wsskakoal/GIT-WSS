@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:lojawss/app/dados/dados_produtos.dart';
-import 'package:lojawss/app/telas/widgets/janela_produtos_grade.dart';
+import 'package:lojawss/app/telas/janelas/janela_produtos_grade.dart';
 
 class TelaCategoria extends StatelessWidget {
   final String categoria;

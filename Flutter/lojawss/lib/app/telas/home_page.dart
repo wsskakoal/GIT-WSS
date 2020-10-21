@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lojawss/app/telas/abas/tablojas.dart';
+import 'package:lojawss/app/telas/widgets/botao_carrinho.dart';
 import 'package:lojawss/app/telas/widgets/menu_lateral.dart';
 
 import 'abas/hometab.dart';
@@ -20,9 +21,11 @@ class HomePage extends StatelessWidget {
         ),
         Scaffold(
           body: TabPromocoes(_pageController),
+          floatingActionButton: BotaoCarrinho(),
         ),
         Scaffold(
           body: TabLojas(),
+          floatingActionButton: BotaoCarrinho(),
           drawer: MenuLateral(_pageController),
         ),
       ],

@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:lojawss/app/dados/dados_produtos.dart';
-import 'package:lojawss/app/telas/widgets/janela_produto_lista.dart';
-import 'package:lojawss/app/telas/widgets/janela_produtos_categorias.dart';
-import 'package:lojawss/app/telas/widgets/janela_produtos_grade.dart';
+import 'package:lojawss/app/telas/janelas/janela_produto_lista.dart';
+import 'package:lojawss/app/telas/janelas/janela_produtos_categorias.dart';
+import 'package:lojawss/app/telas/janelas/janela_produtos_grade.dart';
 import 'package:lojawss/app/telas/widgets/menu_lateral.dart';
 
 class TabPromocoes extends StatelessWidget {

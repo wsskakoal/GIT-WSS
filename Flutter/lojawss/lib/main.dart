@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lojawss/app/dados/modelos/modelo_carrinho.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'app/dados/modelos/modelo_usuario.dart';
 import 'app/telas/home_page.dart';
@@ -14,12 +15,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScopedModel<ModeloUsuario>(
       model: ModeloUsuario(),
-      child: MaterialApp(
-        title: 'Aplicativo loja virtual Wyllian',
-        debugShowCheckedModeBanner: false,
-        theme: appTemaVermelho,
-        home: HomePage(),
-      ),
+      child: ScopedModelDescendant<ModeloUsuario>(
+          builder: (context, child, model) {
+        return ScopedModel<ModeloCarrinho>(
+          model: ModeloCarrinho(model),
+          child: MaterialApp(
+            title: 'Aplicativo loja virtual Wyllian',
+            debugShowCheckedModeBanner: false,
+            theme: appTemaVermelho,
+            home: HomePage(),
+          ),
+        );
+      }),
     );
   }
 }

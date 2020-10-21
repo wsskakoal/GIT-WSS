@@ -1,6 +1,11 @@
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
+import 'package:lojawss/app/dados/dados_produto_carrinho.dart';
 import 'package:lojawss/app/dados/dados_produtos.dart';
+import 'package:lojawss/app/dados/modelos/modelo_carrinho.dart';
+import 'package:lojawss/app/dados/modelos/modelo_usuario.dart';
+import 'package:lojawss/app/telas/janela_login.dart';
+import 'package:lojawss/app/telas/tela_carrinho.dart';
 
 import 'janela_imagem.dart';
 
@@ -33,8 +38,10 @@ class _TelaProdutoState extends State<TelaProduto> {
               boxFit: BoxFit.cover,
               onImageTap: (index) {
                 Navigator.of(context).push(
-                  // IR PARA A TELA DA IMAGEM
-                  MaterialPageRoute(builder: (context) => TelaImagem(produto.images[index])));
+                    // IR PARA A TELA DA IMAGEM
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            TelaImagem(produto.images[index])));
               },
               images: produto.images.map((url) {
                 return NetworkImage(url);
@@ -121,9 +128,32 @@ class _TelaProdutoState extends State<TelaProduto> {
                 SizedBox(
                   height: 44.0,
                   child: RaisedButton(
-                    onPressed: size != null ? () {} : null,
+                    onPressed: size != null
+                        ? () {
+                            if (ModeloUsuario.of(context).isLoggedIn()) {
+                              DadosProdutoCarrinho produtoCarrinho =
+                                  DadosProdutoCarrinho();
+
+                              produtoCarrinho.tamanho = size;
+                              produtoCarrinho.quantidade = 1;
+                              produtoCarrinho.pid = produto.id;
+                              produtoCarrinho.categoria = produto.categoria;
+                              ModeloCarrinho.of(context)
+                                  .adicionarItemCarrinho(produtoCarrinho);
+
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => TelaCarrinho()));
+                            } else {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => TelaLogin(),
+                              ));
+                            }
+                          }
+                        : null,
                     child: Text(
-                      "Adicionar ao carrinho",
+                      ModeloUsuario.of(context).isLoggedIn()
+                          ? "Adicionar ao carrinho"
+                          : "Entre para visualizar",
                       style: TextStyle(fontSize: 25),
                     ),
                     color: corPrimaria,
