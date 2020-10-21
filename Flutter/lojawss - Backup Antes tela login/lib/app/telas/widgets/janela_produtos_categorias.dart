@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:lojawss/app/dados/dados_produtos.dart';
-import 'package:lojawss/app/telas/tela_produto.dart';
+import 'package:lojawss/app/telas/tela_categoria.dart';
 
-class JanelaProdutosLista extends StatelessWidget {
+class JanelaProdutosCategorias extends StatelessWidget {
+  // RECEBE QUANTIDADE DE ITENS NA CATEGORIA
+  final int qtdItens;
   // RECEBE UM DOCUMENTO
   final DadosProduto produto;
   // CRIA O CONSTRUTOR PADRAO COM O DOCUMENTO
-  JanelaProdutosLista(this.produto);
+  JanelaProdutosCategorias(this.produto, this.qtdItens);
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +21,13 @@ class JanelaProdutosLista extends StatelessWidget {
         backgroundImage: NetworkImage(produto.images[0]),
       ),
       // TITULO
-      title: Text(produto.titulo),
+      title: Text(produto.categoria), subtitle: Text(this.qtdItens.toString()),
       // ICONE QUE FICA NO FINAL DO TITULO.
       trailing: Icon(Icons.keyboard_arrow_right),
       onTap: () {
-        Navigator.of(context).push(
-            // IR PARA A TELA DE PRODUTO
-            MaterialPageRoute(builder: (context) => TelaProduto(produto)));
+         Navigator.of(context).push(
+            // IR PARA A TELA DE CATEGORIA
+            MaterialPageRoute(builder: (context) => TelaCategoria(produto.categoria)));
       },
     );
   }

@@ -18,12 +18,4 @@ class DadosProduto {
     preco = snapshot.data["preco"] + 0.0;
     tamanho = snapshot.data["tamanho"];
   }
-
-  Map<String, dynamic> toResumedMap() {
-    return {
-      "titulo": titulo,
-      "descricao": descricao,
-      "preco": preco,
-    };
-  }
 }

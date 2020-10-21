@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lojawss/app/dados/dados_produtos.dart';
-import 'package:lojawss/app/telas/tela_produto.dart';
 
 class JanelaProdutosLista extends StatelessWidget {
   // RECEBE UM DOCUMENTO
@@ -23,9 +22,9 @@ class JanelaProdutosLista extends StatelessWidget {
       // ICONE QUE FICA NO FINAL DO TITULO.
       trailing: Icon(Icons.keyboard_arrow_right),
       onTap: () {
-        Navigator.of(context).push(
-            // IR PARA A TELA DE PRODUTO
-            MaterialPageRoute(builder: (context) => TelaProduto(produto)));
+        /* Navigator.of(context).push(
+            // IR PARA A TELA DE CATEGORIA
+            MaterialPageRoute(builder: (context) => TelaCategoria(snapshot))); */
       },
     );
   }

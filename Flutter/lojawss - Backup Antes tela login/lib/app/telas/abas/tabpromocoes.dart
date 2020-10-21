@@ -22,6 +22,20 @@ class TabPromocoes extends StatelessWidget {
             valueColor: AlwaysStoppedAnimation(Colors.white),
           );
         } else {
+          /*          var dividedCategorias = ListTile.divideTiles(
+                  tiles: snapshot.data.documents.map((doc) {
+                    return JanelaCategorias(doc);
+                  }).toList(),
+                  color: Colors.grey[500])
+              .toList();
+
+          var dividedProdutos = ListTile.divideTiles(
+                  tiles: snapshot.data.documents.map((doc) {
+                    return JanelaCategorias(doc);
+                  }).toList(),
+                  color: Colors.grey[500])
+              .toList(); */
+
           return DefaultTabController(
             length: 3,
             child: Scaffold(
@@ -56,6 +70,20 @@ class TabPromocoes extends StatelessWidget {
                           snapshot.data.documents[index]));
                     },
                   ),
+
+                  /* GridView.builder(
+                    padding: EdgeInsets.all(10.0),
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        mainAxisSpacing: 4.0,
+                        crossAxisSpacing: 4.0,
+                        childAspectRatio: 0.65),
+                    itemCount: snapshot.data.documents.length,
+                    itemBuilder: (context, index) {
+                      return JanelaProdutosGrade(DadosProduto.fromDocument(
+                          snapshot.data.documents[index]));
+                    },
+                  ), */
                   ListView(
                     children: snapshot.data.documents.map((doc) {
                       return JanelaProdutosLista(

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:scoped_model/scoped_model.dart';
+import 'app/dados/modelos/modelo_usuario.dart';
 import 'app/telas/home_page.dart';
+import 'app/tema/tema_vermelho.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,15 +12,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      
-      title: 'Aplicativo loja virtual Wyllian',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-          primarySwatch: Colors.blue,
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-          primaryColor: Color.fromARGB(255, 4, 125, 141)),
-      home: HomePage(),
+    return ScopedModel<ModeloUsuario>(
+      model: ModeloUsuario(),
+      child: MaterialApp(
+        title: 'Aplicativo loja virtual Wyllian',
+        debugShowCheckedModeBanner: false,
+        theme: appTemaVermelho,
+        home: HomePage(),
+      ),
     );
   }
 }

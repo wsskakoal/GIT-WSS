@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lojawss/app/dados/modelos/modelo_usuario.dart';
+import 'package:lojawss/app/telas/janela_login.dart';
+import 'package:scoped_model/scoped_model.dart';
 import 'titulo_menu_lateral.dart';
 
 class MenuLateral extends StatelessWidget {
@@ -7,6 +10,7 @@ class MenuLateral extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Color corPrimaria = Theme.of(context).primaryColor;
     Widget _buildBodyBack() => Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -45,19 +49,50 @@ class MenuLateral extends StatelessWidget {
                     ),
                     Positioned(
                       left: 0.0,
-                      top: 8.0,
-                      child: Text(
-                        "Loja Virtual",
-                        style: TextStyle(
-                            fontSize: 34, fontWeight: FontWeight.bold),
-                      ),
+                      bottom: 0.0,
+                      child: ScopedModelDescendant<ModeloUsuario>(
+                          builder: (contex, child, model) {
+                        return Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
+                              "Olá, ${!model.isLoggedIn() ? "" : model.userData["name"]}",
+                              style: TextStyle(
+                                  fontSize: 18.0, fontWeight: FontWeight.bold),
+                            ),
+                            GestureDetector(
+                              child: Text(
+                                !model.isLoggedIn()
+                                    ? "Entre ou cadastre-se"
+                                    : "Sair",
+                                style: TextStyle(
+                                    color: corPrimaria,
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              onTap: () {
+                                if (!model.isLoggedIn()) {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (context) => TelaLogin(),
+                                    ),
+                                  );
+                                } else {
+                                  model.sair();
+                                }
+                              },
+                            )
+                          ],
+                        );
+                      }),
                     ),
                   ],
                 ),
               ),
               Divider(),
               TituloMenuLateral(Icons.home, pageController, 0, "Início"),
-              TituloMenuLateral(Icons.local_offer, pageController, 1, "Promoções"),
+              TituloMenuLateral(
+                  Icons.local_offer, pageController, 1, "Promoções"),
               TituloMenuLateral(Icons.store, pageController, 2, "Lojas"),
             ],
           )
