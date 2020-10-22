@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lojawss/app/dados/dados_produtos.dart';
-import 'package:lojawss/app/telas/tela_produto.dart';
+import 'package:lojawss/app/telas/paginas/tela_produto.dart';
 
 class JanelaProdutosGrade extends StatelessWidget {
   final DadosProduto produto;

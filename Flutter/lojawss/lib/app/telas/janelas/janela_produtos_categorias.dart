@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lojawss/app/dados/dados_produtos.dart';
-import 'package:lojawss/app/telas/tela_categoria.dart';
+import 'package:lojawss/app/telas/paginas/tela_categoria.dart';
 
 class JanelaProdutosCategorias extends StatelessWidget {
   // RECEBE QUANTIDADE DE ITENS NA CATEGORIA

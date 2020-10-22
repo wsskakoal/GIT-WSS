@@ -4,10 +4,10 @@ import 'package:lojawss/app/dados/dados_produto_carrinho.dart';
 import 'package:lojawss/app/dados/dados_produtos.dart';
 import 'package:lojawss/app/dados/modelos/modelo_carrinho.dart';
 import 'package:lojawss/app/dados/modelos/modelo_usuario.dart';
-import 'package:lojawss/app/telas/janela_login.dart';
-import 'package:lojawss/app/telas/tela_carrinho.dart';
+import 'package:lojawss/app/telas/janelas/janela_login.dart';
+import 'package:lojawss/app/telas/paginas/tela_carrinho.dart';
 
-import 'janela_imagem.dart';
+import '../janelas/janela_imagem.dart';
 
 class TelaProduto extends StatefulWidget {
   final DadosProduto produto;

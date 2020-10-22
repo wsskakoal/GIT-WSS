@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lojawss/app/dados/modelos/modelo_usuario.dart';
-import 'package:lojawss/app/telas/janela_login.dart';
+import 'package:lojawss/app/telas/janelas/janela_login.dart';
 import 'package:scoped_model/scoped_model.dart';
-import 'titulo_menu_lateral.dart';
+import '../widgets/widget_titulo_menu_lateral.dart';
 
 class MenuLateral extends StatelessWidget {
   final PageController pageController;
@@ -90,10 +90,10 @@ class MenuLateral extends StatelessWidget {
                 ),
               ),
               Divider(),
-              TituloMenuLateral(Icons.home, pageController, 0, "Início"),
-              TituloMenuLateral(
+              WidgetTituloMenuLateral(Icons.home, pageController, 0, "Início"),
+              WidgetTituloMenuLateral(
                   Icons.local_offer, pageController, 1, "Promoções"),
-              TituloMenuLateral(Icons.store, pageController, 2, "Lojas"),
+              WidgetTituloMenuLateral(Icons.store, pageController, 2, "Lojas"),
             ],
           )
         ],

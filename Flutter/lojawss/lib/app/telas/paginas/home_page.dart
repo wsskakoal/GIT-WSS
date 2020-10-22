@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:lojawss/app/telas/abas/tablojas.dart';
-import 'package:lojawss/app/telas/widgets/botao_carrinho.dart';
-import 'package:lojawss/app/telas/widgets/menu_lateral.dart';
+import 'package:lojawss/app/telas/widgets/widget_barra_inferior.dart';
+import 'package:lojawss/app/telas/widgets/widget_botao_carrinho.dart';
+import 'package:lojawss/app/telas/menus/menu_lateral.dart';
 
-import 'abas/hometab.dart';
-import 'abas/tabpromocoes.dart';
+import '../abas/hometab.dart';
+import '../abas/tabpromocoes.dart';
 
 class HomePage extends StatelessWidget {
   final _pageController = PageController();
@@ -18,15 +19,18 @@ class HomePage extends StatelessWidget {
         Scaffold(
           body: HomeTab(_pageController),
           drawer: MenuLateral(_pageController),
+          bottomNavigationBar: WidgetBarraInferior(_pageController, 0),
         ),
         Scaffold(
           body: TabPromocoes(_pageController),
-          floatingActionButton: BotaoCarrinho(),
+          floatingActionButton: WidgetBotaoCarrinho(),
+          bottomNavigationBar: WidgetBarraInferior(_pageController, 1),
         ),
         Scaffold(
           body: TabLojas(),
-          floatingActionButton: BotaoCarrinho(),
+          floatingActionButton: WidgetBotaoCarrinho(),
           drawer: MenuLateral(_pageController),
+          bottomNavigationBar: WidgetBarraInferior(_pageController, 2),
         ),
       ],
     );

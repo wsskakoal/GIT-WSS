@@ -4,7 +4,7 @@ import 'package:lojawss/app/dados/dados_produtos.dart';
 import 'package:lojawss/app/telas/janelas/janela_produto_lista.dart';
 import 'package:lojawss/app/telas/janelas/janela_produtos_categorias.dart';
 import 'package:lojawss/app/telas/janelas/janela_produtos_grade.dart';
-import 'package:lojawss/app/telas/widgets/menu_lateral.dart';
+import 'package:lojawss/app/telas/menus/menu_lateral.dart';
 
 class TabPromocoes extends StatelessWidget {
   final PageController controller;
@@ -32,7 +32,7 @@ class TabPromocoes extends StatelessWidget {
                 bottom: TabBar(
                   indicatorColor: Colors.white,
                   tabs: [
-                    Tab(icon: Icon(Icons.grid_on)),
+                    Tab(icon: Icon(Icons.border_all)),
                     Tab(icon: Icon(Icons.list)),
                     Tab(
                       text: "CATEGORIAS",

@@ -48,14 +48,16 @@ class HomeTab extends StatelessWidget {
                       label: Text("Promoções"),
                       icon: Icon(Icons.local_offer),
                       onPressed: () {
-                        controller.jumpToPage(1);
+                        controller.animateToPage(1,
+                            duration: Duration(seconds: 1), curve: Curves.easeInOutQuint);
                       },
                     ),
                     FlatButton.icon(
                       label: Text("Lojas"),
                       icon: Icon(Icons.store_mall_directory),
                       onPressed: () {
-                        controller.jumpToPage(2);
+                        controller.animateToPage(2,
+                            duration: Duration(seconds: 1), curve: Curves.easeInOutQuint);
                       },
                     ),
                   ]),

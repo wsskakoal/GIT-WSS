@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lojawss/app/dados/modelos/modelo_carrinho.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'app/dados/modelos/modelo_usuario.dart';
-import 'app/telas/home_page.dart';
+import 'app/telas/paginas/home_page.dart';
 import 'app/tema/tema_vermelho.dart';
 
 void main() {
