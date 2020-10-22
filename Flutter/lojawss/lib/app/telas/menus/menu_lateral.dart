@@ -94,6 +94,8 @@ class MenuLateral extends StatelessWidget {
               WidgetTituloMenuLateral(
                   Icons.local_offer, pageController, 1, "Promoções"),
               WidgetTituloMenuLateral(Icons.store, pageController, 2, "Lojas"),
+              WidgetTituloMenuLateral(
+                  Icons.phone_android, pageController, 3, "Pedidos"),
             ],
           )
         ],

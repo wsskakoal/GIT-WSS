@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lojawss/app/telas/abas/tablojas.dart';
+import 'package:lojawss/app/telas/paginas/tela_pedido.dart';
 import 'package:lojawss/app/telas/widgets/widget_barra_inferior.dart';
 import 'package:lojawss/app/telas/widgets/widget_botao_carrinho.dart';
 import 'package:lojawss/app/telas/menus/menu_lateral.dart';
@@ -32,6 +33,7 @@ class HomePage extends StatelessWidget {
           drawer: MenuLateral(_pageController),
           bottomNavigationBar: WidgetBarraInferior(_pageController, 2),
         ),
+        TelaPedido(),
       ],
     );
   }

@@ -138,8 +138,9 @@ class _TelaProdutoState extends State<TelaProduto> {
                               produtoCarrinho.quantidade = 1;
                               produtoCarrinho.pid = produto.id;
                               produtoCarrinho.categoria = produto.categoria;
-                              ModeloCarrinho.of(context)
-                                  .adicionarItemCarrinho(produtoCarrinho);
+                              produtoCarrinho.produto = produto;
+                              ModeloCarrinho.of(context).adicionarItemCarrinho(
+                                  produtoCarrinho, context);
 
                               Navigator.of(context).push(MaterialPageRoute(
                                   builder: (context) => TelaCarrinho()));

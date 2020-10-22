@@ -11,7 +11,9 @@ class WidgedtProdutoCarrinho extends StatelessWidget {
   WidgedtProdutoCarrinho(this.produtoCarrinho);
   @override
   Widget build(BuildContext context) {
+    // CRIAR CONSTRUTOR DA PARTE DO PRODUTO DO CARRINHO
     Widget _buildContent() {
+      ModeloCarrinho.of(context).updateCarrinho();
       return Row(
         children: <Widget>[
           Container(
@@ -54,16 +56,19 @@ class WidgedtProdutoCarrinho extends StatelessWidget {
                   children: <Widget>[
                     IconButton(
                         icon: Icon(Icons.remove_circle),
-                        onPressed:
-                            produtoCarrinho.quantidade > 1 ? () {
-                               ModeloCarrinho.of(context)
-                            .decreItemCarrinho(produtoCarrinho);
-                            } : null),
+                        onPressed: produtoCarrinho.quantidade > 1
+                            ? () {
+                                ModeloCarrinho.of(context)
+                                    .decreItemCarrinho(produtoCarrinho);
+                              }
+                            : null),
                     Text(produtoCarrinho.quantidade.toString()),
-                    IconButton(icon: Icon(Icons.add_circle), onPressed: () {
-                      ModeloCarrinho.of(context)
-                            .acreItemCarrinho(produtoCarrinho);
-                    }),
+                    IconButton(
+                        icon: Icon(Icons.add_circle),
+                        onPressed: () {
+                          ModeloCarrinho.of(context)
+                              .acreItemCarrinho(produtoCarrinho);
+                        }),
                     FlatButton(
                       onPressed: () {
                         ModeloCarrinho.of(context)
@@ -80,7 +85,9 @@ class WidgedtProdutoCarrinho extends StatelessWidget {
         ],
       );
     }
+    // FIM DA PARTE CONSTRUTOR DA PARTE DO PRODUTO DO CARRINHO
 
+// CONTRUIR A PAGINA
     return Card(
         margin: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
         child: produtoCarrinho.produto == null

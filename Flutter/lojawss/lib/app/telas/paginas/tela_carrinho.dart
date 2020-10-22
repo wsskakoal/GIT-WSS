@@ -3,7 +3,10 @@ import 'package:lojawss/app/dados/modelos/modelo_carrinho.dart';
 import 'package:lojawss/app/dados/modelos/modelo_usuario.dart';
 import 'package:lojawss/app/telas/janelas/janela_login.dart';
 import 'package:lojawss/app/telas/paginas/tela_carregamento_padrao.dart';
+import 'package:lojawss/app/telas/paginas/tela_pedido.dart';
 import 'package:lojawss/app/telas/widgets/widget_cupom_desconto_carrinho.dart';
+import 'package:lojawss/app/telas/widgets/widget_frete_carrinho.dart';
+import 'package:lojawss/app/telas/widgets/widget_preco_carrinho.dart';
 import 'package:lojawss/app/telas/widgets/widget_produto_carrinho.dart';
 import 'package:lojawss/app/tema/cor_primaria.dart';
 import 'package:scoped_model/scoped_model.dart';
@@ -85,11 +88,25 @@ class TelaCarrinho extends StatelessWidget {
           return ListView(
             children: <Widget>[
               Column(
-                children: model.produtos.map((produto){
+                children: model.produtos.map((produto) {
                   return WidgedtProdutoCarrinho(produto);
                 }).toList(),
               ),
               WidgetCupomDesconto(),
+              WidgetFrete(),
+              WidgetPrecoCarrinho(() async {
+                String orderId = await model.finalizarPedido(context);
+                if (orderId != null) {
+                  Scaffold.of(context).showSnackBar(SnackBar(
+                      duration: Duration(seconds: 2),
+                      content: Text(
+                          "Pedido finalizado com sucesso. Numero da ordem: $orderId")));
+                  Future.delayed(Duration(seconds: 2)).then((value) =>
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (context) => TelaPedido(),
+                      )));
+                }
+              }),
             ],
           );
         }
