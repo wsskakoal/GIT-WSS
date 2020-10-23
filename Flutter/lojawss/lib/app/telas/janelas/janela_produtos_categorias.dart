@@ -21,13 +21,15 @@ class JanelaProdutosCategorias extends StatelessWidget {
         backgroundImage: NetworkImage(produto.images[0]),
       ),
       // TITULO
-      title: Text(produto.categoria), subtitle: Text(this.qtdItens.toString()),
+      title: Text(produto.categoria),
+      subtitle: Text("Itens: ${this.qtdItens.toString()}"),
       // ICONE QUE FICA NO FINAL DO TITULO.
       trailing: Icon(Icons.keyboard_arrow_right),
       onTap: () {
-         Navigator.of(context).push(
+        Navigator.of(context).push(
             // IR PARA A TELA DE CATEGORIA
-            MaterialPageRoute(builder: (context) => TelaCategoria(produto.categoria)));
+            MaterialPageRoute(
+                builder: (context) => TelaCategoria(produto.categoria)));
       },
     );
   }

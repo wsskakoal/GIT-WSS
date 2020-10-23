@@ -8,7 +8,6 @@ import 'package:lojawss/app/telas/widgets/widget_ordens_pedido.dart';
 import 'package:lojawss/app/tema/cor_primaria.dart';
 
 class TelaPedido extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     if (ModeloUsuario.of(context).isLoggedIn()) {
@@ -22,18 +21,25 @@ class TelaPedido extends StatelessWidget {
         builder: (context, snapshot) {
           if (!snapshot.hasData) {
             return TelaCarregamentoPadrao();
-          }
-          else{
-          return Scaffold(
-          appBar: AppBar(
-            title: Text('Tela de Pedido'),
-            centerTitle: true,
-          ),
-          body: ListView(children: snapshot.data.documents.map((doc) => WidgetOrdem(doc.documentID)).toList(),),);
+          } else {
+            return Scaffold(
+              appBar: AppBar(
+                title: Text('Tela de Pedido'),
+                centerTitle: true,
+              ),
+              body: ListView(
+                children: snapshot.data.documents
+                    .map((doc) => WidgetOrdem(doc.documentID))
+                    .toList()
+                    // INVERTE A LISTA
+                    .reversed
+                    // JOGA COMO LISTA NOVAMENTE
+                    .toList(),
+              ),
+            );
           }
         },
       );
-      
     } else {
       return Scaffold(
         appBar: AppBar(
