@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lojawss/app/telas/paginas/tela_carrinho.dart';
 
 class WidgetBarraInferior extends StatelessWidget {
   final PageController _controller;

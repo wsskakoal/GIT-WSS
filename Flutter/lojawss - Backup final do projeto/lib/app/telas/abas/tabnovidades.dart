@@ -5,8 +5,7 @@ import 'package:lojawss/app/tema/cor_primaria.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class TabNovidades extends StatelessWidget {
-  final PageController controller;
-  TabNovidades(this.controller);
+
   @override
   Widget build(BuildContext context) {
     // CRIADO DE DEGRADE

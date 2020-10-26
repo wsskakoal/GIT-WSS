@@ -1,9 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:lojawss/app/telas/paginas/tela_carregamento_padrao.dart';
 import 'package:lojawss/app/telas/widgets/widget_loja.dart';
-import 'package:transparent_image/transparent_image.dart';
 
 class TabLojas extends StatelessWidget {
   @override

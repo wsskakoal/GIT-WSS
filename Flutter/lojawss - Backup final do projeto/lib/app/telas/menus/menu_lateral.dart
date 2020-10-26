@@ -2,12 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:lojawss/app/dados/modelos/modelo_usuario.dart';
 import 'package:lojawss/app/telas/janelas/janela_login.dart';
 import 'package:scoped_model/scoped_model.dart';
-import '../widgets/widget_titulo_menu_lateral.dart';
 
 class MenuLateral extends StatelessWidget {
-  final PageController pageController;
-  MenuLateral(this.pageController);
-
   @override
   Widget build(BuildContext context) {
     Color corPrimaria = Theme.of(context).primaryColor;
@@ -28,37 +24,48 @@ class MenuLateral extends StatelessWidget {
       child: Stack(
         children: <Widget>[
           _buildBodyBack(),
-          ListView(
-            padding: EdgeInsets.only(top: 40, left: 20),
-            children: <Widget>[
-              Container(
-                color: Colors.transparent,
-                margin: EdgeInsets.only(bottom: 20),
-                padding: EdgeInsets.only(),
-                height: 100,
-                child: Stack(
-                  children: <Widget>[
-                    Positioned(
-                      top: 8.0,
-                      left: 0.0,
-                      child: Text(
-                        "Loja Virtual",
-                        style: TextStyle(
-                            fontSize: 34, fontWeight: FontWeight.bold),
-                      ),
+          ScopedModelDescendant<ModeloUsuario>(
+            builder: (contex, child, model) {
+              return ListView(
+                padding: EdgeInsets.zero,
+                children: <Widget>[
+                  UserAccountsDrawerHeader(
+                    accountEmail: Text("user@mail.com"),
+                    accountName: Text("Seu zé"),
+                    currentAccountPicture: CircleAvatar(
+                      child: Text("SZ"),
                     ),
-                    Positioned(
-                      left: 0.0,
-                      bottom: 0.0,
-                      child: ScopedModelDescendant<ModeloUsuario>(
-                          builder: (contex, child, model) {
-                        return Column(
+                  ),
+                  Container(
+                    color: Colors.transparent,
+                    margin: EdgeInsets.only(bottom: 20),
+                    padding: EdgeInsets.all(10),
+                    height: 160,
+                    child: Stack(children: <Widget>[
+                      Positioned(
+                        top: 8.0,
+                        left: 0.0,
+                        child: Text(
+                          "E - Promo",
+                          style: TextStyle(
+                              fontSize: 34, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Positioned(
+                        top: 60,
+                        width: 300,
+                        left: 0.0,
+                        bottom: 0.0,
+                        child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Text(
-                              "Olá, ${!model.isLoggedIn() ? "" : model.userData["name"]}",
+                              "Olá, seja bem vindo ${!model.isLoggedIn() ? "" : model.userData["name"]}",
                               style: TextStyle(
                                   fontSize: 18.0, fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 10,
                             ),
                             GestureDetector(
                               child: Text(
@@ -81,23 +88,30 @@ class MenuLateral extends StatelessWidget {
                                   model.sair();
                                 }
                               },
-                            )
+                            ),
                           ],
-                        );
-                      }),
-                    ),
-                  ],
-                ),
-              ),
-              Divider(),
-              WidgetTituloMenuLateral(Icons.home, pageController, 0, "Início"),
-              WidgetTituloMenuLateral(
-                  Icons.local_offer, pageController, 1, "Promoções"),
-              WidgetTituloMenuLateral(Icons.store, pageController, 2, "Lojas"),
-              WidgetTituloMenuLateral(
-                  Icons.phone_android, pageController, 3, "Pedidos"),
-            ],
-          )
+                        ),
+                      ),
+                    ]),
+                  ),
+                  Divider(),
+                  ListTile(
+                    leading: Icon(Icons.shopping_basket),
+                    title: Text("Meus pedidos"),
+                    onTap: () {
+                      Navigator.pop(context);
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => TelaLogin(),
+                        ),
+                      );
+                      //Navegar para outra página
+                    },
+                  ),
+                ],
+              );
+            },
+          ),
         ],
       ),
     );

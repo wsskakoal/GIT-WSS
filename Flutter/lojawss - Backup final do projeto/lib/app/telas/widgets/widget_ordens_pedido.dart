@@ -2,9 +2,10 @@ import 'dart:collection';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
 import 'package:lojawss/app/telas/paginas/tela_carregamento_padrao.dart';
 
+// ignore: must_be_immutable
 class WidgetOrdem extends StatelessWidget {
   String documentoId;
   WidgetOrdem(this.documentoId);

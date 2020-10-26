@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lojawss/app/dados/dados_produto_carrinho.dart';
 import 'package:lojawss/app/dados/modelos/modelo_usuario.dart';
-import 'package:lojawss/app/telas/widgets/widget_produto_carrinho.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 class ModeloCarrinho extends Model {

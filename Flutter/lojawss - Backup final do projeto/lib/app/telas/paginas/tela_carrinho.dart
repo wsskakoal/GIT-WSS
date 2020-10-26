@@ -36,6 +36,7 @@ class TelaCarrinho extends StatelessWidget {
       // TELA DEPENDERA DO CARRINHO, SE O CARRINHO FOR ALTERADO PELO
       // LISTENER ENTAO A TELA VAI SER MUDADA TBM.
       body: ScopedModelDescendant<ModeloCarrinho>(
+          // ignore: missing_return
           builder: (context, child, model) {
         if (model.isLoading && ModeloUsuario.of(context).isLoggedIn()) {
           return TelaCarregamentoPadrao();

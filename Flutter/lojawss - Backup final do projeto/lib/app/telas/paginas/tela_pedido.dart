@@ -1,11 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:lojawss/app/dados/modelos/modelo_usuario.dart';
 import 'package:lojawss/app/telas/janelas/janela_login.dart';
 import 'package:lojawss/app/telas/paginas/tela_carregamento_padrao.dart';
 import 'package:lojawss/app/telas/widgets/widget_ordens_pedido.dart';
 import 'package:lojawss/app/tema/cor_primaria.dart';
+import 'package:lojawss/app/telas/menus/menu_lateral.dart';
 
 class TelaPedido extends StatelessWidget {
   @override
@@ -23,6 +23,7 @@ class TelaPedido extends StatelessWidget {
             return TelaCarregamentoPadrao();
           } else {
             return Scaffold(
+              drawer: MenuLateral(),
               appBar: AppBar(
                 title: Text('Tela de Pedido'),
                 centerTitle: true,

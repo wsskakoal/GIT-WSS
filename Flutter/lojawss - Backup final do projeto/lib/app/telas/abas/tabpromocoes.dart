@@ -7,8 +7,7 @@ import 'package:lojawss/app/telas/janelas/janela_produtos_grade.dart';
 import 'package:lojawss/app/telas/menus/menu_lateral.dart';
 
 class TabPromocoes extends StatelessWidget {
-  final PageController controller;
-  TabPromocoes(this.controller);
+  final PageController controller = new PageController();
   @override
   Widget build(BuildContext context) {
     // ARMAZENA AS CATEGORIAS JÁ CRIADAS
@@ -23,9 +22,9 @@ class TabPromocoes extends StatelessWidget {
           );
         } else {
           return DefaultTabController(
-            length: 3,
+            length: 2,
             child: Scaffold(
-              drawer: MenuLateral(controller),
+              drawer: MenuLateral(),
               appBar: AppBar(
                 title: Text("Promoções"),
                 centerTitle: true,
@@ -33,7 +32,6 @@ class TabPromocoes extends StatelessWidget {
                   indicatorColor: Colors.white,
                   tabs: [
                     Tab(icon: Icon(Icons.border_all)),
-                    Tab(icon: Icon(Icons.list)),
                     Tab(
                       text: "CATEGORIAS",
                     ),
@@ -56,12 +54,12 @@ class TabPromocoes extends StatelessWidget {
                           snapshot.data.documents[index]));
                     },
                   ),
-                  ListView(
+                  /*  ListView(
                     children: snapshot.data.documents.map((doc) {
                       return JanelaProdutosLista(
                           DadosProduto.fromDocument(doc));
                     }).toList(),
-                  ),
+                  ), */
                   ListView(
                     children: ListTile.divideTiles(
                             tiles: snapshot.data.documents.map((doc) {

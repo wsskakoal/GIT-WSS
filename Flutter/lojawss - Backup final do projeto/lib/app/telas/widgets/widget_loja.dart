@@ -1,8 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
 import 'package:url_launcher/url_launcher.dart';
 
+// ignore: must_be_immutable
 class WidgetLoja extends StatelessWidget {
   DocumentSnapshot snapshotLoja;
   WidgetLoja(this.snapshotLoja);
