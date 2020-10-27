@@ -1,4 +1,4 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+/* import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:lojawss/app/telas/widgets/category_tile.dart';
@@ -148,3 +148,4 @@ class TabPromocoes2 extends StatelessWidget {
     ); */
   }
 }
+ */

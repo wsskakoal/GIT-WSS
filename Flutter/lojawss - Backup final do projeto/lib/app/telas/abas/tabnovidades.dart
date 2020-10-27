@@ -1,13 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:lojawss/app/telas/paginas/tela_pesquisa_produtos.dart';
 import 'package:lojawss/app/tema/cor_primaria.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class TabNovidades extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
+    String pesquisaText;
     // CRIADO DE DEGRADE
     Widget _buildBodyBack() => Container(
           decoration: BoxDecoration(color: corPrimaria),
@@ -35,7 +36,7 @@ class TabNovidades extends StatelessWidget {
                 child: TextField(
                   style: TextStyle(color: Colors.white),
                   decoration: InputDecoration(
-                    hintText: "Pesquisar",
+                    hintText: "Pesquisar por produtos",
                     hintStyle: TextStyle(
                       color: Colors.white,
                     ),
@@ -45,6 +46,21 @@ class TabNovidades extends StatelessWidget {
                     ),
                     border: InputBorder.none,
                   ),
+                  onChanged: (value) {
+                    if (value.trim().isNotEmpty) {
+                      pesquisaText = value;
+                    }
+                  },
+                  onEditingComplete: () {
+                    if (pesquisaText.isNotEmpty) {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              TelaPesquisaProduto(pesquisaText),
+                        ),
+                      );
+                    }
+                  },
                 ),
               ),
             ),

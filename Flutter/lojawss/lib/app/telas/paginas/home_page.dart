@@ -16,6 +16,7 @@ class HomePage extends StatelessWidget {
     return PageView(
       controller: _pageController,
       scrollDirection: Axis.horizontal,
+      
       children: <Widget>[
         Scaffold(
           body: HomeTab(_pageController),
