@@ -18,7 +18,7 @@ class ProdutoModel {
 
   Future <List<DocumentSnapshot>> procurarProdutoSearch (String pesquisa)  async{
     List<DocumentSnapshot> listaItensPesquisados;
-    await _firestore.collection("produtos").snapshots().listen((snapshot) {
+    _firestore.collection("produtos").snapshots().listen((snapshot) {
       snapshot.documents.forEach((documento) {
         String uid = documento.documentID;
         if (documento.data["titulo"]
@@ -29,6 +29,6 @@ class ProdutoModel {
         }
       });
     });
-    return listaItensPesquisados;
+   return listaItensPesquisados;
   }
 }

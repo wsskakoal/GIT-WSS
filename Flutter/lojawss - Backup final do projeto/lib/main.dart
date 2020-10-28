@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         return ScopedModel<ModeloCarrinho>(
           model: ModeloCarrinho(model),
           child: MaterialApp(
-            title: 'Aplicativo loja virtual Wyllian',
+            title: 'E - Promo',
             debugShowCheckedModeBanner: false,
             theme: appTemaVermelho,
             home: HomePage(),
