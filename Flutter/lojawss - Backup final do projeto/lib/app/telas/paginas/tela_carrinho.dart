@@ -16,7 +16,7 @@ class TelaCarrinho extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Meu Carrinho"),
+        title: Text("Finalizar pedido"),
         // ACTIONS É O QUE FICA NA LATERAL DA APP BAR
         actions: <Widget>[
           Container(

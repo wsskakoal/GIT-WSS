@@ -26,7 +26,8 @@ class ModeloCarrinho extends Model {
   static ModeloCarrinho of(BuildContext context) =>
       ScopedModel.of<ModeloCarrinho>(context);
 
-  void adicionarItemCarrinho(DadosProdutoCarrinho produtoCarrinho, BuildContext context) {
+  void adicionarItemCarrinho(
+      DadosProdutoCarrinho produtoCarrinho, BuildContext context) {
     produtos.add(produtoCarrinho);
     Firestore.instance
         // ACESSA A PRIMEIRA COLEÇÃO DO BANCO DE DADOS
@@ -39,10 +40,9 @@ class ModeloCarrinho extends Model {
         .add(produtoCarrinho.toMap())
         .then((doc) {
       produtoCarrinho.cid = doc.documentID;
-    }).catchError((e){
-        Scaffold.of(context).showSnackBar(
-          SnackBar(content: Text("Erro ao adicionar produto ao carrinho. Erro: $e"))
-        );
+    }).catchError((e) {
+      Scaffold.of(context).showSnackBar(SnackBar(
+          content: Text("Erro ao adicionar produto ao carrinho. Erro: $e")));
     });
     notifyListeners();
   }
@@ -121,7 +121,7 @@ class ModeloCarrinho extends Model {
   }
 
   double getValorFrete() {
-    return 9.99;
+    return 0.00;
   }
 
   void updateCarrinho() {

@@ -30,7 +30,10 @@ class JanelaProdutosGrade extends StatelessWidget {
               padding: EdgeInsets.all(8.0),
               child: Column(
                 children: <Widget>[
-                  Text(produto.titulo),
+                  Text(
+                    produto.titulo,
+                    maxLines: 1,
+                  ),
                   Text(
                     "R\$ ${produto.preco.toStringAsFixed(2)}",
                   ),

@@ -128,6 +128,7 @@ class _TelaProdutoState extends State<TelaProduto> {
                 SizedBox(
                   height: 44.0,
                   child: RaisedButton(
+                    
                     onPressed: size != null
                         ? () {
                             if (ModeloUsuario.of(context).isLoggedIn()) {
@@ -153,7 +154,7 @@ class _TelaProdutoState extends State<TelaProduto> {
                         : null,
                     child: Text(
                       ModeloUsuario.of(context).isLoggedIn()
-                          ? "Adicionar ao carrinho"
+                          ? "Realizar pedido"
                           : "Entre para visualizar",
                       style: TextStyle(fontSize: 25),
                     ),

@@ -1,7 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:lojawss/app/dados/dados_produtos.dart';
 import 'package:lojawss/app/telas/paginas/tela_pesquisa_produtos.dart';
+import 'package:lojawss/app/telas/paginas/tela_produto.dart';
 import 'package:lojawss/app/tema/cor_primaria.dart';
 import 'package:transparent_image/transparent_image.dart';
 
@@ -82,21 +84,89 @@ class TabNovidades extends StatelessWidget {
                     mainAxisSpacing: 1.0,
                     crossAxisSpacing: 1.0,
                     staggeredTiles: snapshot.data.documents.map((doc) {
-                      return StaggeredTile.count(doc.data["x"], doc.data["y"]);
+                      return StaggeredTile.count(2, 2);
                     }).toList(),
                     children: snapshot.data.documents.map((doc) {
-                      return FadeInImage.memoryNetwork(
-                        placeholder: kTransparentImage,
-                        image: doc.data["image"],
-                        fit: BoxFit.cover,
-                      );
+                      return Card(child: GestureDetector(
+                        child: Container(
+                          width: 20,
+                          height: 20,
+                          child: Column(
+                            children: <Widget>[
+                              Card(
+                                color: Colors.white,
+                                shadowColor: Colors.black,
+                                child: FadeInImage.memoryNetwork(
+                                  placeholder: kTransparentImage,
+                                  image: doc.data["imgs"][0],
+                                  height: 350,
+                                  fit: BoxFit.fitHeight,
+                                ),
+                              ),
+                              Container(
+                                alignment: Alignment.center,
+                                height: 20,
+                                width: 400,
+                                child: Text(
+                                  doc.data["titulo"].toString().toUpperCase(),
+                                  maxLines: 1,
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  Container(
+                                    padding: EdgeInsets.only(left: 10),
+                                    alignment: Alignment.centerLeft,
+                                    height: 20,
+                                    width: 240,
+                                    child: Text(
+                                      "Categoria: ${doc.data["categoria"]}",
+                                      maxLines: 1,
+                                      style: TextStyle(
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                  ),
+
+                                  //Divider(),
+                                  Container(
+                                    padding: EdgeInsets.only(right: 10),
+                                    alignment: Alignment.centerRight,
+                                    height: 20,
+                                    width: 160,
+                                    child: Text(
+                                      "Valor: R\$${doc.data["preco"]}",
+                                      maxLines: 1,
+                                      style: TextStyle(
+                                        fontSize: 17,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  TelaProduto(DadosProduto.fromDocument(doc)),
+                            ),
+                          );
+                        },
+                      ),);
                     }).toList(),
                   );
                 }
               },
               future: Firestore.instance
-                  .collection("home")
-                  .orderBy("pos")
+                  .collection("produtos")
+                  .orderBy("dataAdd", descending: true)
                   .getDocuments(),
             )
           ],
