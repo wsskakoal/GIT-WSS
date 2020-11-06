@@ -11,8 +11,6 @@ import '../model/user_model.dart';
 const baseUrl = 'http://gerador-nomes.herokuapp.com/nomes/10';
 
 class LoginApiClient {
-
-  
   FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   GetStorage box = GetStorage('login_firebase');
 

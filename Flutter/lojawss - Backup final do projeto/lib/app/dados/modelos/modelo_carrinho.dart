@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lojawss/app/dados/dados_produto_carrinho.dart';
+import 'package:lojawss/app/dados/dados_produtos.dart';
 import 'package:lojawss/app/dados/modelos/modelo_usuario.dart';
 import 'package:scoped_model/scoped_model.dart';
 
@@ -132,6 +133,20 @@ class ModeloCarrinho extends Model {
     double preco = 0.0;
     preco = getValorProdutos() - getValorDesconto() + getValorFrete();
     return preco;
+  }
+
+  bool verificaLojaItem(String lojaUID) {
+    bool mesmaLoja = true;
+    String lojaId = "";
+
+    if (produtos.length > 0) {
+      lojaId = produtos[0].lojaId;
+      if (lojaId != null) {
+        if (lojaId != lojaUID) mesmaLoja = false;
+      }
+    }
+
+    return mesmaLoja;
   }
 
   Future<String> finalizarPedido(BuildContext context) async {

@@ -1,4 +1,5 @@
 GestoreDetector - Criar um campo onde pega uma click no ontap.
+SingleChildScroolView - Criar uma linha que nao acaba.
 
 - PARA CRIAR UMA BARRA DE NAVEGAÇÃO
 return Scaffold(

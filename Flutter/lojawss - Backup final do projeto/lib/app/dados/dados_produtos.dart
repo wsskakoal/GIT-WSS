@@ -7,6 +7,7 @@ class DadosProduto {
   double preco;
   List images;
   String categoria;
+  String lojaId;
   List tamanho;
 
   DadosProduto.fromDocument(DocumentSnapshot snapshot) {
@@ -15,6 +16,7 @@ class DadosProduto {
     descricao = snapshot.data["descricao"];
     images = snapshot.data["imgs"];
     categoria = snapshot.data["categoria"];
+    lojaId = snapshot.data["lojaId"];
     preco = snapshot.data["preco"] + 0.0;
     tamanho = snapshot.data["tamanho"];
   }

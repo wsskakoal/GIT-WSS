@@ -11,21 +11,22 @@ void main() async {
   GetStorage box = GetStorage('login_firebase');
   WidgetsFlutterBinding.ensureInitialized();
 
-  runApp(GetMaterialApp(
-    title: "LOGIN FIREBASE",
+  runApp(
+    GetMaterialApp(
+      title: "LOGIN FIREBASE",
+      // TEMA INICIAL DA APLICAÇÃO
+      theme: box.read("theme") == "dark"
+          ? appThemeDataDark
+          : appThemeData ?? appThemeData,
+      themeMode: ThemeMode.system,
+      darkTheme: appThemeDataDark,
 
-    // TEMA INICIAL DA APLICAÇÃO
-    theme: box.read("theme") == "dark"
-        ? appThemeDataDark
-        : appThemeData ?? appThemeData,
-    themeMode: ThemeMode.system,
-    darkTheme: appThemeDataDark,
-
-    // DESABILITAR BANNER DEBUG
-    debugShowCheckedModeBanner: false,
-    //ARQUVISO DE ROTAS
-    getPages: AppPages.routes,
-    // Rota inicial
-    initialRoute: Routes.INITIAL,
-  ));
+      // DESABILITAR BANNER DEBUG
+      debugShowCheckedModeBanner: false,
+      //ARQUVISO DE ROTAS
+      getPages: AppPages.routes,
+      // Rota inicial
+      initialRoute: Routes.INITIAL,
+    ),
+  );
 }

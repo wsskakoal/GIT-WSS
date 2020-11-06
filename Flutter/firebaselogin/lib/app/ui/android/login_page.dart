@@ -22,7 +22,6 @@ class _LoginPageState extends State<LoginPage> {
         child: Stack(
           children: <Widget>[
             Container(
-              
               width: double.maxFinite,
               child: Image.asset(
                 "assets/splash.jpg",
@@ -72,12 +71,12 @@ class _LoginPageState extends State<LoginPage> {
                         controller: _loginController.passwordTextController,
                         // ignore: missing_return
                         validator: (value) {
-                            if (value.isEmpty) {
-                              return "Campo obrigatório";
-                            } else if (value.length < 6) {
-                              return "Senha deve conter no mínimo 6 caracteres.";
-                            }
-                          },
+                          if (value.isEmpty) {
+                            return "Campo obrigatório";
+                          } else if (value.length < 6) {
+                            return "Senha deve conter no mínimo 6 caracteres.";
+                          }
+                        },
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 20),
                         obscureText: true,

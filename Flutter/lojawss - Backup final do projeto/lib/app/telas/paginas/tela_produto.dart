@@ -19,6 +19,7 @@ class TelaProduto extends StatefulWidget {
 class _TelaProdutoState extends State<TelaProduto> {
   final DadosProduto produto;
   String size;
+  final _scaffoldKey = GlobalKey<ScaffoldState>();
 
   _TelaProdutoState(this.produto);
 
@@ -26,6 +27,7 @@ class _TelaProdutoState extends State<TelaProduto> {
   Widget build(BuildContext context) {
     final Color corPrimaria = Theme.of(context).primaryColor;
     return Scaffold(
+      key: _scaffoldKey,
       appBar: AppBar(
         title: Text(produto.titulo),
         centerTitle: true,
@@ -128,27 +130,46 @@ class _TelaProdutoState extends State<TelaProduto> {
                 SizedBox(
                   height: 44.0,
                   child: RaisedButton(
-                    
                     onPressed: size != null
                         ? () {
                             if (ModeloUsuario.of(context).isLoggedIn()) {
-                              DadosProdutoCarrinho produtoCarrinho =
-                                  DadosProdutoCarrinho();
+                              if (!ModeloCarrinho.of(context)
+                                  .verificaLojaItem(produto.lojaId)) {
+                                _scaffoldKey.currentState.showSnackBar(
+                                  SnackBar(
+                                    content: Text(
+                                        "Não é posspivel realizar pedido em duas lojas diferentes."),
+                                    backgroundColor: corPrimaria,
+                                    duration: Duration(seconds: 4),
+                                  ),
+                                );
+                              } else {
+                                DadosProdutoCarrinho produtoCarrinho =
+                                    DadosProdutoCarrinho();
+                                produtoCarrinho.tamanho = size;
+                                produtoCarrinho.quantidade = 1;
+                                produtoCarrinho.pid = produto.id;
+                                produtoCarrinho.categoria = produto.categoria;
+                                produtoCarrinho.produto = produto;
+                                //++ Wyllian 05/11/2020.
+                                produtoCarrinho.lojaId = produto.lojaId;
 
-                              produtoCarrinho.tamanho = size;
-                              produtoCarrinho.quantidade = 1;
-                              produtoCarrinho.pid = produto.id;
-                              produtoCarrinho.categoria = produto.categoria;
-                              produtoCarrinho.produto = produto;
-                              ModeloCarrinho.of(context).adicionarItemCarrinho(
-                                  produtoCarrinho, context);
+                                ModeloCarrinho.of(context)
+                                    .adicionarItemCarrinho(
+                                        produtoCarrinho, context);
 
-                              Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => TelaCarrinho()));
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (context) => TelaCarrinho(),
+                                  ),
+                                );
+                              }
                             } else {
-                              Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => TelaLogin(),
-                              ));
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => TelaLogin(),
+                                ),
+                              );
                             }
                           }
                         : null,

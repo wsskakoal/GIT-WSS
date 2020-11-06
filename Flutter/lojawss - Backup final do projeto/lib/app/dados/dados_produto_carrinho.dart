@@ -7,13 +7,15 @@ class DadosProdutoCarrinho {
   String categoria;
   int quantidade;
   String tamanho;
+  String lojaId;
   DadosProduto produto;
 
   DadosProdutoCarrinho();
-  
+
   DadosProdutoCarrinho.fromDocument(DocumentSnapshot snapshot) {
     cid = snapshot.documentID;
     pid = snapshot.data["pid"];
+    lojaId = snapshot.data["lojaId"];
     categoria = snapshot.data["categoria"];
     quantidade = snapshot.data["quantidade"];
     tamanho = snapshot.data["tamanho"];
@@ -25,6 +27,7 @@ class DadosProdutoCarrinho {
       "pid": pid,
       "quantidade": quantidade,
       "tamanho": tamanho,
+      "lojaId": lojaId,
       "produto": produto.toResumedMap(),
     };
   }
